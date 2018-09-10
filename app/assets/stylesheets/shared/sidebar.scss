@@ -1,0 +1,25 @@
+.sidebar {
+  position: fixed;
+  top: 50px;
+  width: 240px;
+  height: 100%;
+  background: #f0f0f0;
+  border-right: 1px solid #cccccc;
+
+  &-mass {
+    &-label {
+      padding: 10px;
+      font-size: 18px;
+      color: #AAAAAA;
+    }
+
+    &-content {
+      .list-group-item {
+        padding-left: 30px;
+        border-left: unset;
+        border-right: unset;
+        border-radius: 0;
+      }
+    }
+  }
+}

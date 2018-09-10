@@ -1,0 +1,11 @@
+.sidebar
+  .sidebar-mass
+    .sidebar-mass-label test
+    .sidebar-mass-content.list-group
+      = active_link_to root_path, class: 'list-group-item' do
+        .fa.fa-home.fa-fw
+        | home
+
+      = active_link_to cards_path, class: 'list-group-item' do
+        | test
+

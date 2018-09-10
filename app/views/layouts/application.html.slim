@@ -5,7 +5,12 @@ html
     = csp_meta_tag
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body class=(body_class)
     = render 'shared/admin/header'
-    = yield
+    = render 'shared/admin/sidebar'
+
+    .content-body
+      = yield
