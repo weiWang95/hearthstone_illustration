@@ -1,0 +1,46 @@
+header
+  nav.navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'Brand', '#', class: 'navbar-brand'
+
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            = link_to '#' do
+              | Link
+              span.sr-only = "(current)"
+          li
+            = link_to 'Link', '#'
+          li.dropdown
+            a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              | Dropdown
+              span.caret
+            ul.dropdown-menu
+              li = link_to 'Active', '#'
+              li = link_to 'Active', '#'
+              li = link_to 'Active', '#'
+              li.divider role="separator"
+              li = link_to 'Separated link', '#'
+              li.divider role="separator"
+              li = link_to 'One more separated link', '#'
+
+          form.navbar-form.navbar-left
+            .form-group
+              input type="text" class="form-control" placeholder="Search"
+            button.btn.btn-default type="submit"
+              | Submit
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to 'link', '#'
+            li.dropdown
+              a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                | Dropdown
+                span.caret
+              ul.dropdown-menu
+                li = link_to 'Action', '#'
