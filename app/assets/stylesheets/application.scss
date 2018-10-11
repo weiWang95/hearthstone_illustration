@@ -1,8 +1,7 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "rails_bootstrap_forms";
 @import "./bootstrap-custom";
 @import "./bootstrap-variant";
-@import "./shared/sidebar";
 
 body {
   padding-top: 70px;

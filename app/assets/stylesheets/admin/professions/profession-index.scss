@@ -1,0 +1,20 @@
+.admin-professions-index-page {
+  .profession-list {
+      &-name,
+      &-icon {
+        width: 20%;
+      }
+      &-skill {
+        width: 40%;
+      }
+      &-actions {
+        width: 20%;
+      }
+
+    .profession-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}

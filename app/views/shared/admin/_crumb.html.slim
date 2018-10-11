@@ -1,0 +1,7 @@
+- if @_crumbs.present?
+  .crumb
+    - @_crumbs.each do |crumb|
+      - if crumb[:url].present?
+        = link_to(crumb[:name], crumb[:url], class: 'crumb-item')
+      - else
+        span.crumb-item = crumb[:name]

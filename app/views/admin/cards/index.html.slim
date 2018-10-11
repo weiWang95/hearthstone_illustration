@@ -1,0 +1,14 @@
+.card-actions.admin-actions
+  = link_to '新增卡牌', new_admin_card_path
+
+.card-list.admin-list
+  table.table.table-hover
+    thead
+      tr
+        th 名称
+        th 类型
+        th 职业
+        th 稀有度
+        th 操作
+    tbody
+      = render_list(partial: 'card_item', collection: @cards, as: :card)

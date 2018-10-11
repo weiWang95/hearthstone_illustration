@@ -1,0 +1,19 @@
+.crumb {
+  padding-bottom: 20px;
+
+  &-item {
+    height: 30px;
+    font-size: 18px;
+
+    &::after {
+      content: "/";
+      color: #555555;
+      margin: 0 10px;
+      cursor: default;
+    }
+
+    &:last-child {
+      &::after { display: none; }
+    }
+  }
+}

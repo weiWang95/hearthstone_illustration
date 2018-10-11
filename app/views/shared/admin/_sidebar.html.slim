@@ -1,11 +1,26 @@
 .sidebar
   .sidebar-mass
-    .sidebar-mass-label test
+    .sidebar-mass-label 系统管理
     .sidebar-mass-content.list-group
-      = active_link_to root_path, class: 'list-group-item' do
+      = active_link_to admin_dashboards_path, class: 'list-group-item list-group-item-action' do
         .fa.fa-home.fa-fw
-        | home
+        | 控制台
 
-      = active_link_to cards_path, class: 'list-group-item' do
-        | test
+      = active_link_to admin_cards_path, class: 'list-group-item list-group-item-action' do
+        .fa.fa-book.fa-fw
+        | 卡牌管理
+
+      = active_link_to admin_professions_path, class: 'list-group-item list-group-item-action' do
+        .fa.fa-paw.fa-fw
+        | 职业管理
+
+      = active_link_to admin_effects_path, class: 'list-group-item list-group-item-action' do
+        .fa.fa-flash.fa-fw
+        | 效果管理
+  .sidebar-mass
+    .sidebar-mass-label 其他管理
+    .sidebar-mass-content.list-group
+      = active_link_to admin_users_path, class: 'list-group-item list-group-item-action' do
+        .fa.fa-user.fa-fw
+        | 用户管理
 

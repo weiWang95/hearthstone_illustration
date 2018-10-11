@@ -10,5 +10,10 @@ html
     = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
   body class=(body_class)
     = render 'shared/admin/header'
+    = render 'shared/admin/sidebar'
 
-    = yield
+    .main-container
+      = render 'shared/admin/crumb'
+
+      .custom-content
+        = yield

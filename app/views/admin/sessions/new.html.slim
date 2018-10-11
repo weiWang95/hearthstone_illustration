@@ -1,0 +1,5 @@
+.login-form.container
+  = bootstrap_form_tag(url: admin_sessions_path) do |f|
+    = f.text_field :username, label: '用户名', required: true
+    = f.password_field :password, label: '密码', required: true
+    = f.submit '登录'

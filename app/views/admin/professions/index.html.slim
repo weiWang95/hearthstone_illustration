@@ -1,0 +1,16 @@
+.profession-actions.admin-actions
+  = link_to '新增职业', new_admin_profession_path
+
+.profession-list.admin-list.table-responsive
+  table.table.table-hover.table-vertical
+    thead
+      tr
+        th.profession-list-name 名称
+        th.profession-list-icon 图标
+        th.profession-list-skill 技能
+        th.profession-list-actions 操作
+    tbody.admin-list-body
+      = render_list(partial: 'profession_item', collection: @professions, as: :profession)
+
+  .profession-paginate.admin-paginate
+    = render_paginate @professions

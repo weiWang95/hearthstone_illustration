@@ -2,8 +2,6 @@ module ExceptionHandler
   extend ActiveSupport::Concern
 
   included do
-    before_action :prepare_exception_notifier
-
     rescue_from StandardError do |ex|
       logger.error format('%s (%s):', ex.class.name, ex.message)
       logger.error ex.backtrace.join("\n")
@@ -32,13 +30,5 @@ module ExceptionHandler
         render_internal_server_error
       end
     end
-  end
-
-  private
-
-  def prepare_exception_notifier
-    request.env['exception_notifier.exception_data'] = {
-        current_user: current_user.inspect
-    }
   end
 end

@@ -1,0 +1,9 @@
+'zh-CN':
+  enumerize:
+    card:
+      quality:
+        base: 基本卡
+        normal: 普通
+        rare: 稀有
+        epic: 史诗
+        legendary: 传说

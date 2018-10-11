@@ -1,0 +1,30 @@
+.admin-actions {
+  margin-bottom: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.admin-list {
+}
+
+table.table-vertical {
+  thead th, tbody td {
+    vertical-align: middle;
+  }
+}
+
+.admin-form {
+  width: 600px;
+
+  .form-group {
+    input[type="text"] {
+      width: 300px;
+    }
+    textarea {
+      width: 500px;
+      height: 150px;
+      color: #555555;
+    }
+  }
+}

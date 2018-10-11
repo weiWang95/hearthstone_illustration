@@ -16,7 +16,7 @@ module ControllerRenderHelper
     if request.xhr?
       render json: { message: message }, status: :forbidden
     else
-      render template: 'pages/err403', layout: 'pages'
+      render template: 'pages/err403'
     end
   end
 
@@ -24,7 +24,7 @@ module ControllerRenderHelper
     if request.xhr?
       render json: { message: message }, status: :not_found
     else
-      render template: 'pages/err404', layout: 'pages'
+      render template: 'pages/err404'
     end
   end
 
@@ -32,7 +32,7 @@ module ControllerRenderHelper
     if request.xhr?
       render json: { message: message }, status: :unprocessable_entity
     else
-      render template: 'pages/err422', layout: 'pages'
+      render template: 'pages/err422'
     end
   end
 
@@ -40,7 +40,7 @@ module ControllerRenderHelper
     if request.xhr?
       render json: { message: message }, status: :internal_server_error
     else
-      render template: 'pages/err500', layout: 'pages'
+      render template: 'pages/err500'
     end
   end
 

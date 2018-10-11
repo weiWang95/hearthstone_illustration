@@ -1,0 +1,10 @@
+.profession-form.admin-form
+  = bootstrap_form_for(form, url: form_url, method: form_method) do |f|
+    = f.text_field :name, label: '职业名称', required: true
+    = f.file_field :icon, label: '职业图标', required: true
+    - if action == :edit
+      .profession-icon-content
+        = image_tag(form.icon.url, class: 'profession-icon')
+
+    = f.text_area :skill, label: '职业技能', placeholder: '输入职业技能描述', required: true
+    = f.submit '保存', class: 'btn btn-success'

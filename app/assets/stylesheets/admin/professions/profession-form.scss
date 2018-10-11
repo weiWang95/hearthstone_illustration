@@ -1,0 +1,16 @@
+.admin-professions-new-page,
+.admin-professions-create-page,
+.admin-professions-edit-page,
+.admin-professions-update-page {
+  .profession-form {
+    .profession-icon-content {
+      margin-top: -10px;
+      margin-bottom: 20px;
+
+      .profession-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

@@ -58,9 +58,11 @@ gem 'bcrypt'
 gem 'carrierwave', '~> 1.0'
 
 # view
-gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'active_link_to'
-gem 'simple_form', '~> 4.0.0'
 gem 'bootbox-rails', '~>0.4'
+gem 'bootstrap_form', '>= 4.0.0.alpha1'
+gem 'kaminari'

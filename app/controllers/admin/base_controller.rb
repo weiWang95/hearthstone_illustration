@@ -1,10 +1,11 @@
-class Admin::BaseController < ApplicationController::Base
+class Admin::BaseController < ActionController::Base
   include ExceptionHandler
   include ControllerRenderHelper
+  include CrumbHelper
 
   protect_from_forgery with: :exception
 
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
 
   layout 'admin'
 
@@ -12,7 +13,7 @@ class Admin::BaseController < ApplicationController::Base
 
   private
 
-  def authenticate_user!
+  def authenticate_admin!
     render_unauthorized && return if current_admin.blank?
   end
 
@@ -26,6 +27,7 @@ class Admin::BaseController < ApplicationController::Base
 
   def admin_sign_in(admin)
     session[:current_admin_id] = admin.id
+    admin.reflush_last_login(request.remote_ip)
   end
 
   def admin_sign_out

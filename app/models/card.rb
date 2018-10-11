@@ -12,7 +12,7 @@ class Card < ApplicationRecord
   validates :attack, numericality: { greater_than_or_equal_to: 0 }, allow_blank: true
   validates :hp, numericality: { greater_than: 0 }, allow_blank: true
 
-  enumerize :quality, in: %i{base normal rare epic legendary}, default: :normal
+  enumerize :quality, in: %i[base normal rare epic legendary], default: :normal
 
   mount_uploader :cover, CardCoverUploader
   mount_uploader :gold_cover, CardGoldCoverUploader

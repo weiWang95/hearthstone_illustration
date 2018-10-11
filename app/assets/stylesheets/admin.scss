@@ -1,9 +1,30 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "rails_bootstrap_forms";
 @import "./bootstrap-custom";
 @import "./bootstrap-variant";
-@import "./shared/sidebar";
+@import "./shared/admin/*";
+@import "./shared/*";
+@import "./admin/**/*";
+@import "./admin/*";
 
 body {
   padding-top: 70px;
+  background: #f0f0f0;
+}
+
+a {
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+.main-container {
+  margin-left: 200px;
+  margin-right: 20px;
+
+  .custom-content {
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+  }
 }

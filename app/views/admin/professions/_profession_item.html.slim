@@ -1,0 +1,9 @@
+tr
+  td.profession-list-name
+     = profession.name
+  td.profession-list-icon
+     = image_tag(profession.icon_url, class: 'profession-icon')
+  td.profession-list-skill
+     = profession.skill
+  td.profession-list-actions
+    = link_to '编辑', edit_admin_profession_path(profession)
