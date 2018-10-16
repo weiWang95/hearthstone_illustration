@@ -1,6 +1,8 @@
 class ProfessionForm
   include ActiveModel::Model
 
+  Error = Class.new(StandardError)
+
   attr_reader :profession
   attr_accessor :name, :icon, :skill
 

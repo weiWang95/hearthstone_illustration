@@ -1,0 +1,13 @@
+development:
+  cloud_name: "test"
+  api_key: "1231243123123"
+  api_secret: "lkajsdkjflkasjdfkjsdlfjlsdf"
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: <%= ENV['STORAGE_CLOUD_NAME'] %>
+  api_key: <%= ENV['STORAGE_API_KEY'] %>
+  api_secret: <%= ENV['STORAGE_API_SECRET'] %>
+  secure: true
+  cdn_subdomain: true

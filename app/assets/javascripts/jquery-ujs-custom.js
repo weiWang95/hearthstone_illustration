@@ -1,4 +1,6 @@
 (function() {
+  this.App || (this.App = {});
+
   if (App.jqueryUjsCustomJsInited) {
     return;
   }

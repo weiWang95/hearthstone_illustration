@@ -9,6 +9,8 @@ html
 
     = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
   body class=(body_class)
+    = cloudinary_js_config
+
     = render 'shared/admin/header'
     = render 'shared/admin/sidebar'
 

@@ -1,4 +1,5 @@
 (function() {
+  this.App || (this.App = {});
   if (App.turbolinksCustomJsInited) { return; }
   App.turbolinksCustomJsInited = true;
 

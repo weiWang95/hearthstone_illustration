@@ -1,10 +1,11 @@
 .profession-form.admin-form
   = bootstrap_form_for(form, url: form_url, method: form_method) do |f|
     = f.text_field :name, label: '职业名称', required: true
-    = f.file_field :icon, label: '职业图标', required: action == :new
-    - if action == :edit
+    = f.form_group label: { text: '职业图标', class: 'profession-icon-label' } do
       .profession-icon-content
-        = image_tag(form.icon.url, class: 'profession-icon')
+        = resize_image_tag(form.icon, width: 64, height: 64, class: 'profession-icon')
+      = cl_image_upload_tag('profession_form[icon]', folder: 'profession')
+      = custom_form_error(f, :icon)
 
     = f.text_area :skill, label: '职业技能', placeholder: '输入职业技能描述', required: true
     = f.submit '保存', class: 'btn btn-success'

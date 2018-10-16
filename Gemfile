@@ -55,6 +55,7 @@ gem 'bcrypt'
 
 # file uploader
 gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 
 # view
 # gem 'bootstrap-sass', '~> 3.3.7'

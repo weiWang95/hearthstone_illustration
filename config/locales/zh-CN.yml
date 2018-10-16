@@ -1,0 +1,8 @@
+'zh-CN':
+  activemodel:
+    errors:
+      models:
+        profession_form:
+          attributes:
+            icon:
+              blank: 不能为空

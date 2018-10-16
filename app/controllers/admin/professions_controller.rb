@@ -20,6 +20,8 @@ class Admin::ProfessionsController < Admin::BaseController
     else
       render 'new'
     end
+  rescue ProfessionForm::Error => e
+    render_unprocessable_entity(e.message)
   end
 
   def edit
@@ -28,12 +30,14 @@ class Admin::ProfessionsController < Admin::BaseController
   end
 
   def update
-    @form = ProfessionForm.new(Profession.new, permit_params)
+    @form = ProfessionForm.new(@profession, permit_params)
     if @form.save
       redirect_to admin_professions_path
     else
       render 'edit'
     end
+  rescue ProfessionForm::Error => e
+    render_unprocessable_entity(e.message)
   end
 
   private

@@ -3,13 +3,14 @@
 .admin-professions-edit-page,
 .admin-professions-update-page {
   .profession-form {
+    .profession-icon-label {
+      display: block;
+    }
+
     .profession-icon-content {
-      margin-top: -10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       .profession-icon {
-        width: 60px;
-        height: 60px;
       }
     }
   }

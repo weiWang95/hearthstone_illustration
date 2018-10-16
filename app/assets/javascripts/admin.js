@@ -6,7 +6,9 @@
 //= require noty
 //= require ./jquery-ujs-custom
 //= require ./turbolinks-custom
-//= require_tree .
+//= require cloudinary
+//= require ./image-directly-upload
+//= require_tree ./admin
 
 (function() {
   this.App || (this.App = {});
