@@ -1,7 +1,7 @@
 .profession-form.admin-form
   = bootstrap_form_for(form, url: form_url, method: form_method) do |f|
     = f.text_field :name, label: '职业名称', required: true
-    = f.file_field :icon, label: '职业图标', required: true
+    = f.file_field :icon, label: '职业图标', required: action == :new
     - if action == :edit
       .profession-icon-content
         = image_tag(form.icon.url, class: 'profession-icon')

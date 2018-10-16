@@ -1,0 +1,2 @@
+$('.admin-list-body').html("<%= j render_list(partial: 'card_item', collection: @cards, as: :card) %>");
+$('.admin-paginate').html("<%= j render_paginate @cards, total_count: @count %>")

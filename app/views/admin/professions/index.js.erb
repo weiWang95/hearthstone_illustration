@@ -1,2 +1,2 @@
 $('.admin-list-body').html("<%= j render_list(partial: 'profession_item', collection: @professions, as: :profession) %>");
-$('.admin-paginate').html("<%= j render_paginate @professions %>")
+$('.admin-paginate').html("<%= j render_paginate @professions, total_count: @count %>")

@@ -13,4 +13,4 @@
       = render_list(partial: 'profession_item', collection: @professions, as: :profession)
 
   .profession-paginate.admin-paginate
-    = render_paginate @professions
+    = render_paginate @professions, total_count: @count

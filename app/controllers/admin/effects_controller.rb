@@ -2,6 +2,9 @@ class Admin::EffectsController < Admin::BaseController
   before_action :load_crumb
 
   def index
+    effects  = Effect.all
+    @count   = effects.count
+    @effects = effects.page(params[:page])
   end
 
   private

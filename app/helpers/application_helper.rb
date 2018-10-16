@@ -11,7 +11,7 @@ module ApplicationHelper
     end
   end
 
-  def render_paginate(records)
-    render('shared/paginate', records: records || [])
+  def render_paginate(records, **opts)
+    render('shared/paginate', records: records || [], opts: opts)
   end
 end

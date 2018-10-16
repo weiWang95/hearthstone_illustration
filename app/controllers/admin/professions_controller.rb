@@ -3,7 +3,9 @@ class Admin::ProfessionsController < Admin::BaseController
   before_action :load_profession, only: [:edit, :update]
 
   def index
-    @professions = Profession.all.page(params[:page])
+    professions  = Profession.all
+    @count       = professions.count
+    @professions = professions.page(params[:page])
   end
 
   def new

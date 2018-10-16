@@ -2,7 +2,9 @@ class Admin::CardsController < Admin::BaseController
   before_action :load_crumb
 
   def index
-    @cards = Card.includes(:profession).all
+    cards  = Card.all
+    @count = cards.count
+    @cards = cards.includes(:profession).page(params[:page])
   end
 
   private

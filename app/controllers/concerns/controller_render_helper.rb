@@ -8,7 +8,7 @@ module ControllerRenderHelper
       render json: { message: message }, status: :unauthorized
     else
       store_forwarding_path
-      redirect_to login_path
+      redirect_to new_admin_sessions_path
     end
   end
 

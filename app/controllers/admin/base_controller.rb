@@ -34,4 +34,13 @@ class Admin::BaseController < ActionController::Base
     session[:current_admin_id] = nil
     @_current_admin = nil
   end
+
+  def redirect_back_or(fallback_location)
+    redirect_to(session[:admin_forwarding_path] || fallback_location)
+    session[:admin_forwarding_path] = nil
+  end
+
+  def store_forwarding_path
+    session[:admin_forwarding_path] = request.path if request.get?
+  end
 end
