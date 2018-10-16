@@ -1,5 +1,5 @@
-$(document).on('turbolinks:load', () => {
-  let component = $(".profession-form");
+$(document).on('turbolinks:load', function() {
+  var component = $(".profession-form");
   if (component.length != 1) return;
 
   component.find('.cloudinary-fileupload').bind('cloudinarydone', function(e, data) {
